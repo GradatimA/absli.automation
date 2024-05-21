@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ABSLI]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.Analyzer.MyTransform"/>
+    <listener class-name="com.Analyzer.ListenerInAbsli"/>
+  </listeners>
+  <test name="Absli(failed)">
+    <classes>
+      <class name="com.ABSLI.qa.testcases.LoginpageTest">
+        <methods>
+          <include name="atlast"/>
+          <include name="setup"/>
+          <include name="logintest"/>
+        </methods>
+      </class> <!-- com.ABSLI.qa.testcases.LoginpageTest -->
+    </classes>
+  </test> <!-- Absli(failed) -->
+</suite> <!-- Failed suite [ABSLI] -->

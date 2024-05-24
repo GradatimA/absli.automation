@@ -25,8 +25,7 @@ public class AbsliParent {
 
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"C:\\Users\\Mallikandan E\\eclipse-workspace\\ABSLITest\\src\\main\\java\\com\\ABSLI\\qa\\config\\Config.Properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\Mallikandan E\\git\\Manikandan-AutomationScript\\ABSLITest\\src\\main\\java\\com\\ABSLI\\qa\\config\\AbsliConfig.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -60,5 +59,10 @@ public class AbsliParent {
 		Select s=new Select(e);
 		s.selectByValue(str);
 
+	}
+	public static void dropdown(WebElement f,String str) {
+		Select v=new Select (f);
+		v.selectByVisibleText(str);
+		
 	}
 }

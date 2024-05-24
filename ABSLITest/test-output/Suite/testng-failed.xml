@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test name="Test(failed)">
     <classes>
-      <class name="com.ABSLI.qa.testcases.LoginpageTest">
+      <class name="com.ABSLI.qa.testcases.ClaimspageTest">
         <methods>
-          <include name="atlast"/>
-          <include name="setup"/>
+          <include name="CreateClaims"/>
           <include name="logintest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.ABSLI.qa.testcases.LoginpageTest -->
+      </class> <!-- com.ABSLI.qa.testcases.ClaimspageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

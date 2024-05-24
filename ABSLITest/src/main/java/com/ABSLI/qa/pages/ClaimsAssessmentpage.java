@@ -74,7 +74,7 @@ public class ClaimsAssessmentpage extends AbsliParent {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void Assessment() throws InterruptedException, AWTException {
+	public void Assessment(String ClaimRecc,String DeviaApprved,String AddiDocu,String DocuName,String DocuType) throws InterruptedException, AWTException {
 
 		Robot robot = new Robot();
 		Thread.sleep(8000);
@@ -98,19 +98,19 @@ public class ClaimsAssessmentpage extends AbsliParent {
 		Thread.sleep(3000);
 		Select.click();
 		Thread.sleep(3000);
-		dropdownselector(Claim_Recommendation, "1");
+		dropdown(Claim_Recommendation, ClaimRecc);
 		Thread.sleep(3000);
-		dropdownselector(Deviation_Approver, "180");
+		dropdown(Deviation_Approver, DeviaApprved);
 		Thread.sleep(3000);
-		dropdownselector(Additional_Documents, "1");
+		dropdown(Additional_Documents, AddiDocu);
 		Thread.sleep(3000);
-		DocumentName.sendKeys("Adhar");
+		DocumentName.sendKeys(DocuName);
 		Thread.sleep(3000);
 		AddButton.click();
 		Thread.sleep(3000);
 		Checklist.click();
 		Thread.sleep(3000);
-		dropdownselector(DocumentType, "100001");
+		dropdown(DocumentType, DocuType);
 		Thread.sleep(5000);
 		UploadFile.click();
 		Thread.sleep(5000);

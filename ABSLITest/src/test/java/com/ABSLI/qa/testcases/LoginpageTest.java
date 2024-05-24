@@ -33,7 +33,7 @@ public class LoginpageTest extends AbsliParent {
 
 	@Test()
 	public  void logintest() throws InterruptedException, IOException {
-		loginpage.login(prop.getProperty("usernames"), prop.getProperty("passwords"));
+		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
 }

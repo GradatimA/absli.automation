@@ -14,30 +14,35 @@ import com.ABSLI.qa.base.AbsliParent;
 
 public class Claimspage extends AbsliParent {
 
-	@FindBy(xpath = "//body/form[@id='frm']/div[@id='wrapper']/nav[@id='sidebar_wrapper']"
-			+ "/ul[@class='nav sidebar-nav']/li[@id='liClaims']/a[1]")
-	WebElement claimDrops;
-
-	@FindBy(xpath = "//a[normalize-space()='Intimation']")
-	WebElement Intimation;
-
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtSearchCompanyName']")
-	WebElement Client_Name;
-
-	@FindBy(xpath = "//span[@id='select2-ContentPlaceHolder1_ddlMasterPolicyNo-container']")
-	WebElement Master_Policy_Number;
-
-	@FindBy(xpath = "//li[@id='select2-ContentPlaceHolder1_ddlMasterPolicyNo-result-l847-68113']")
-	WebElement drops;
-
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtNBusiness']")
-	WebElement New_Claim;
-
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnSearchClaims']")
-	WebElement Search;
-
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_gvClaimGroup_btngvSelectGroup_0']")
-	WebElement Select;
+	/*
+	 * @FindBy(xpath =
+	 * "//body/form[@id='frm']/div[@id='wrapper']/nav[@id='sidebar_wrapper']" +
+	 * "/ul[@class='nav sidebar-nav']/li[@id='liClaims']/a[1]") WebElement
+	 * claimDrops;
+	 * 
+	 * @FindBy(xpath = "//a[normalize-space()='Intimation']") WebElement Intimation;
+	 * 
+	 * @FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtSearchCompanyName']")
+	 * WebElement Client_Name;
+	 * 
+	 * @FindBy(xpath =
+	 * "//span[@id='select2-ContentPlaceHolder1_ddlMasterPolicyNo-container']")
+	 * WebElement Master_Policy_Number;
+	 * 
+	 * @FindBy(xpath =
+	 * "//li[@id='select2-ContentPlaceHolder1_ddlMasterPolicyNo-result-l847-68113']")
+	 * WebElement drops;
+	 * 
+	 * @FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtNBusiness']") WebElement
+	 * New_Claim;
+	 * 
+	 * @FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnSearchClaims']")
+	 * WebElement Search;
+	 * 
+	 * @FindBy(xpath =
+	 * "//input[@id='ContentPlaceHolder1_gvClaimGroup_btngvSelectGroup_0']")
+	 * WebElement Select;
+	 */
 
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtLocationofDeath']")
 	WebElement Location_Of_Event;
@@ -101,62 +106,56 @@ public class Claimspage extends AbsliParent {
 
 	}
 
-	public void claimintimation() throws InterruptedException, AWTException {
+	public void claimintimationProcess(String Location,String DOE,String COE,String BeniName,String PayMode,
+			   String RelaWithInsu, String Ifsccode,String AccType,String AccNum,
+			   String Sharetyp,String share,String COD) throws InterruptedException, AWTException {
+		/*
+		 * Thread.sleep(3000); claimDrops.click(); Thread.sleep(3000);
+		 * Intimation.click(); Thread.sleep(3000); Client_Name.sendKeys(CName);
+		 * Thread.sleep(3000); Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+		 * Thread.sleep(5000); Robot robot = new Robot(); Master_Policy_Number.click();
+		 * Thread.sleep(5000); robot.keyPress(KeyEvent.VK_DOWN); Thread.sleep(3000);
+		 * robot.keyPress(KeyEvent.VK_DOWN); Thread.sleep(3000);
+		 * robot.keyPress(KeyEvent.VK_ENTER); Thread.sleep(3000); New_Claim.click();
+		 * Thread.sleep(3000); Search.click(); Thread.sleep(3000); Select.click();
+		 */
 		Thread.sleep(3000);
-		claimDrops.click();
+		Location_Of_Event.sendKeys(Location);
 		Thread.sleep(3000);
-		Intimation.click();
-		Thread.sleep(3000);
-		Client_Name.sendKeys("Cynnent");
-		Thread.sleep(3000);
-		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-		Thread.sleep(5000);
-		Robot robot = new Robot();
-		Master_Policy_Number.click();
-		Thread.sleep(5000);
-		robot.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(3000);
-		New_Claim.click();
-		Thread.sleep(3000);
-		Search.click();
-		Thread.sleep(3000);
-		Select.click();
-		Thread.sleep(3000);
-		Location_Of_Event.sendKeys("Bangalore");
-		Thread.sleep(3000);
-		DateOfEvent.sendKeys("01/05/2024");
+		DateOfEvent.sendKeys(DOE);
 		Thread.sleep(5000);
 		Claim_Intimation_Date.click();
+		//Claim_Intimation_Date.sendKeys(COD);
 		Thread.sleep(5000);
 		// NextButton.click();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		// SPDate.click();
+		//Thread.sleep(3000);
+		//Caus_of_Event.click();
+		//dropdownselector(Caus_of_Event, COE);
+		dropdown(Caus_of_Event,COE);
 		Thread.sleep(3000);
-		dropdownselector(Caus_of_Event, "1");
+		Beneficiary_Name.sendKeys(BeniName);
 		Thread.sleep(3000);
-		Beneficiary_Name.sendKeys("Test");
+		dropdown(PaymentMode, PayMode);
+		//dropdownselector(PaymentMode, PayMode);
 		Thread.sleep(3000);
-		dropdownselector(PaymentMode, "12");
+		dropdown(RelationshipWithInsured, RelaWithInsu);
+		//dropdownselector(RelationshipWithInsured, RelaWithInsu);
 		Thread.sleep(3000);
-		dropdownselector(RelationshipWithInsured, "11");
-		Thread.sleep(3000);
-		IFSCCode.sendKeys("ESS");
+		IFSCCode.sendKeys(Ifsccode);
 		Thread.sleep(3000);
 		IFSCCode.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
 		Thread.sleep(3000);
 		// Bank_Name.sendKeys("Indian Bank");
 		Thread.sleep(3000);
-		dropdownselector(AccountType, "3");
+		dropdown(AccountType, AccType);
 		Thread.sleep(3000);
-		AccountNumber.sendKeys("0987654321");
+		AccountNumber.sendKeys(AccNum);
 		Thread.sleep(3000);
-		dropdownselector(ShareType, "1");
+		dropdown(ShareType, Sharetyp);
 		Thread.sleep(3000);
-		Share.sendKeys("100");
+		Share.sendKeys(share);
 		Thread.sleep(8000);
 		ClaimAmount.click();
 		Thread.sleep(5000);
@@ -171,7 +170,7 @@ public class Claimspage extends AbsliParent {
 		// driver.switchTo().alert().accept();
 		OkButton.click();
 		Thread.sleep(8000);
-		Claim_Intimation_Date.sendKeys("05/05/2024");
+		Claim_Intimation_Date.sendKeys(COD);
 		Thread.sleep(8000);
 		Submit.click();
 		Thread.sleep(8000);

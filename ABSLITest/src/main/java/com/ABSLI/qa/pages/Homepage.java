@@ -1,5 +1,6 @@
 package com.ABSLI.qa.pages;
 
+import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
@@ -18,6 +19,16 @@ public class Homepage extends AbsliParent {
 
 	@FindBy(xpath = "//a[normalize-space()='Intimation']")
 	WebElement Intimation;
+	
+	@FindBy(xpath = "//a[normalize-space()='Assessment']")
+	WebElement Assessment;
+	
+	@FindBy(xpath = "//a[normalize-space()='Registration']")
+	WebElement Registration;
+	
+	@FindBy(xpath = "//a[normalize-space()='Approval']")
+	WebElement Approval;
+	
 
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtSearchCompanyName']")
 	WebElement Client_Name;
@@ -34,8 +45,14 @@ public class Homepage extends AbsliParent {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnSearchClaims']")
 	WebElement Search;
 	
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnSearch']")
+	WebElement Search1;
+	
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_gvClaimGroup_btngvSelectGroup_0']")
 	WebElement Select;
+	
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_gvClaim_btngvClaimSelect_0']")
+	WebElement Select1;
 	
       public Homepage() {
     	  PageFactory.initElements(driver, this);
@@ -69,5 +86,80 @@ public class Homepage extends AbsliParent {
       }
       
       
+      public void Assessmentprocess() throws Throwable {
+    	
+    	  Robot robot = new Robot();
+  		Thread.sleep(8000);
+  		claimDrops.click();
+  		Thread.sleep(3000);
+  		Assessment.click();
+  		Thread.sleep(3000);
+  		Client_Name.sendKeys("Cynnent");
+  		Thread.sleep(3000);
+  		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+  		Thread.sleep(5000);
+  		Master_Policy_Number.click();
+  		Thread.sleep(5000);
+  		robot.keyPress(KeyEvent.VK_DOWN);
+  		Thread.sleep(3000);
+  		robot.keyPress(KeyEvent.VK_DOWN);
+  		Thread.sleep(3000);
+  		robot.keyPress(KeyEvent.VK_ENTER);
+  		Thread.sleep(3000);
+  		Search.click();
+  		Thread.sleep(3000);
+  		Select.click();
+  		Thread.sleep(3000);
+      }
       
+      public void Registrationprocess() throws Throwable {
+    	Thread.sleep(5000);
+  		claimDrops.click();
+  		Thread.sleep(3000);
+  		Registration.click();
+  		Thread.sleep(3000);
+  		Client_Name.sendKeys("Cynnent");
+  		Thread.sleep(3000);
+  		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+  		Thread.sleep(5000);
+  		Robot robot = new Robot();
+  		Master_Policy_Number.click();
+  		Thread.sleep(5000);
+  		robot.keyPress(KeyEvent.VK_DOWN);
+  		Thread.sleep(3000);
+  		robot.keyPress(KeyEvent.VK_DOWN);
+  		Thread.sleep(3000);
+  		robot.keyPress(KeyEvent.VK_ENTER);
+  		Thread.sleep(3000);
+  		Search.click();
+  		Thread.sleep(3000);
+  		Select.click();
+  		Thread.sleep(3000);
+    	 
+      }
+      public void Approvalprocess() throws InterruptedException, Throwable {
+    	  
+    	  Robot robot = new Robot();
+  		Thread.sleep(8000);
+  		claimDrops.click();
+  		Thread.sleep(3000);
+  		Approval.click();
+  		Thread.sleep(3000);
+  		Client_Name.sendKeys("cynnent");
+  		Thread.sleep(3000);
+  		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+  		Thread.sleep(3000);
+  		Master_Policy_Number.click();
+  		Thread.sleep(5000);
+  		robot.keyPress(KeyEvent.VK_DOWN);
+  		Thread.sleep(3000);
+  		robot.keyPress(KeyEvent.VK_DOWN);
+  		Thread.sleep(3000);
+  		robot.keyPress(KeyEvent.VK_ENTER);
+  		Thread.sleep(3000);
+  		Search1.click();
+  		Thread.sleep(3000);
+  		Select1.click();
+  		Thread.sleep(3000);
+      }  
 }

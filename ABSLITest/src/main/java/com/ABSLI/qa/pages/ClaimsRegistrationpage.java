@@ -46,27 +46,16 @@ public class ClaimsRegistrationpage extends AbsliParent {
 	}
 
 	public void Registration() throws InterruptedException, AWTException {
-		Thread.sleep(5000);
-		claimDrops.click();
-		Thread.sleep(3000);
-		Registration.click();
-		Thread.sleep(3000);
-		Client_Name.sendKeys("Cynnent");
-		Thread.sleep(3000);
-		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-		Thread.sleep(5000);
-		Robot robot = new Robot();
-		Master_Policy_Number.click();
-		Thread.sleep(5000);
-		robot.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(3000);
-		Search.click();
-		Thread.sleep(3000);
-		Select.click();
+		/*
+		 * Thread.sleep(5000); claimDrops.click(); Thread.sleep(3000);
+		 * Registration.click(); Thread.sleep(3000); Client_Name.sendKeys("Cynnent");
+		 * Thread.sleep(3000); Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+		 * Thread.sleep(5000); Robot robot = new Robot(); Master_Policy_Number.click();
+		 * Thread.sleep(5000); robot.keyPress(KeyEvent.VK_DOWN); Thread.sleep(3000);
+		 * robot.keyPress(KeyEvent.VK_DOWN); Thread.sleep(3000);
+		 * robot.keyPress(KeyEvent.VK_ENTER); Thread.sleep(3000); Search.click();
+		 * Thread.sleep(3000); Select.click();
+		 */
 		Thread.sleep(3000);
 		Register.click();
 		Thread.sleep(3000);

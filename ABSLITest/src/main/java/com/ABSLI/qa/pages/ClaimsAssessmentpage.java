@@ -77,26 +77,16 @@ public class ClaimsAssessmentpage extends AbsliParent {
 	public void Assessment(String ClaimRecc,String DeviaApprved,String AddiDocu,String DocuName,String DocuType) throws InterruptedException, AWTException {
 
 		Robot robot = new Robot();
-		Thread.sleep(8000);
-		claimsdrop.click();
-		Thread.sleep(3000);
-		Assessment.click();
-		Thread.sleep(3000);
-		Client_Name.sendKeys("Cynnent");
-		Thread.sleep(3000);
-		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-		Thread.sleep(5000);
-		Master_Policy_Number.click();
-		Thread.sleep(5000);
-		robot.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_DOWN);
-		Thread.sleep(3000);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(3000);
-		Search.click();
-		Thread.sleep(3000);
-		Select.click();
+		/*
+		 * Thread.sleep(8000); claimsdrop.click(); Thread.sleep(3000);
+		 * Assessment.click(); Thread.sleep(3000); Client_Name.sendKeys("Cynnent");
+		 * Thread.sleep(3000); Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+		 * Thread.sleep(5000); Master_Policy_Number.click(); Thread.sleep(5000);
+		 * robot.keyPress(KeyEvent.VK_DOWN); Thread.sleep(3000);
+		 * robot.keyPress(KeyEvent.VK_DOWN); Thread.sleep(3000);
+		 * robot.keyPress(KeyEvent.VK_ENTER); Thread.sleep(3000); Search.click();
+		 * Thread.sleep(3000); Select.click();
+		 */
 		Thread.sleep(3000);
 		dropdown(Claim_Recommendation, ClaimRecc);
 		Thread.sleep(3000);

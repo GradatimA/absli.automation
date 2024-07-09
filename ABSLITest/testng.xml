@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test">
+  <test name="Claim Process">
     <classes>
-      <class name="com.ABSLI.qa.testcases.ClaimspageTest"/>
+		<class name="com.ABSLI.qa.testcases.cliam.gps.Intimationtest"/>
+		<class name="com.ABSLI.qa.testcases.cliam.gps.Registrationtest"/>
+		<class name="com.ABSLI.qa.testcases.cliam.gps.Assessmenttest"/>
+      <class name="com.ABSLI.qa.testcases.cliam.gps.Approvaltest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+   

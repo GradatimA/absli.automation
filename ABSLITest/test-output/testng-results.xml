@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-24T11:14:15Z" name="Default suite" finished-at="2024-05-24T11:15:21Z" duration-ms="65277">
+  <suite started-at="2024-07-08T11:05:54Z" name="Default suite" finished-at="2024-07-08T11:06:43Z" duration-ms="48758">
     <groups>
     </groups>
-    <test started-at="2024-05-24T11:14:15Z" name="Default test" finished-at="2024-05-24T11:15:21Z" duration-ms="65277">
-      <class name="com.ABSLI.qa.testcases.ClaimsApprovalpageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.ABSLI.qa.testcases.ClaimsApprovalpageTest@21337f7b]" started-at="2024-05-24T16:44:15Z" name="setup" finished-at="2024-05-24T16:44:31Z" duration-ms="15454" status="PASS">
+    <test started-at="2024-07-08T11:05:54Z" name="Default test" finished-at="2024-07-08T11:06:43Z" duration-ms="48758">
+      <class name="com.ABSLI.qa.testcases.Newbusiness.VoluntaryMemberUploadtest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ABSLI.qa.testcases.Newbusiness.VoluntaryMemberUploadtest@21337f7b]" started-at="2024-07-08T16:35:54Z" name="setup" finished-at="2024-07-08T16:36:11Z" duration-ms="16376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Approvetest()[pri:1, instance:com.ABSLI.qa.testcases.ClaimsApprovalpageTest@21337f7b]" started-at="2024-05-24T16:44:31Z" name="Approvetest" finished-at="2024-05-24T16:45:21Z" duration-ms="49775" status="PASS">
+        <test-method signature="Voluntryaddmember()[pri:0, instance:com.ABSLI.qa.testcases.Newbusiness.VoluntaryMemberUploadtest@21337f7b]" started-at="2024-07-08T16:36:11Z" name="Voluntryaddmember" finished-at="2024-07-08T16:36:43Z" duration-ms="32358" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Approvetest -->
-      </class> <!-- com.ABSLI.qa.testcases.ClaimsApprovalpageTest -->
+        </test-method> <!-- Voluntryaddmember -->
+      </class> <!-- com.ABSLI.qa.testcases.Newbusiness.VoluntaryMemberUploadtest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

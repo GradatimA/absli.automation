@@ -10,6 +10,9 @@ public class Loginpage extends AbsliParent {
 
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtUserName']")
 	WebElement username;
+	
+	//input[@id='ContentPlaceHolder1_txtUserName']
+	
 
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtPassword']")
 	WebElement password;

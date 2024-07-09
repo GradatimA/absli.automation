@@ -38,7 +38,7 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.10.1</version>
+    <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -80,11 +80,10 @@
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 <dependency>
-    <groupId>com.relevantcodes</groupId>
+    <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>2.41.2</version>
+    <version>5.1.1</version>
 </dependency>
-
   </dependencies>
 
   <build>

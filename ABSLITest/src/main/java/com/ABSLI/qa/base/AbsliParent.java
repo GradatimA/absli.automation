@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ABSLI.qa.utill.AbsliUtill;
 
@@ -19,17 +20,22 @@ public class AbsliParent {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	public static WebDriverWait wait;
 
-	public AbsliParent() {
+	public AbsliParent()  {
+	
 		prop = new Properties();
-
 		try {
-			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\Mallikandan E\\git\\Manikandan-AutomationScript\\ABSLITest\\src\\main\\java\\com\\ABSLI\\qa\\config\\AbsliConfig.properties");
-			prop.load(ip);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			FileInputStream fis = new FileInputStream("C:\\Users\\Mallikandan E\\git\\Manikandan-AutomationScript\\ABSLITest\\src\\main\\java\\com\\ABSLI\\qa\\config\\AbsliConfig.properties");
+		try {
+			prop.load(fis);
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -41,7 +47,7 @@ public class AbsliParent {
 
 		if (browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Mallikandan E\\eclipse-workspace\\Practice_claim\\driver\\chromedriver.exe");
+					"C:\\Users\\Mallikandan E\\git\\Manikandan-AutomationScript\\ABSLITest\\Driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browsername.equals("FF")) {
 			// System.setProperty("webdriver.gecko.driver", "");
@@ -52,7 +58,13 @@ public class AbsliParent {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(AbsliUtill.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(AbsliUtill.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		wait = new WebDriverWait(driver, Duration.ofMillis(10000));
 		driver.get(prop.getProperty("url"));
+	}
+	public static void end()
+	{
+		driver.manage().window().minimize();
+		driver.quit();
 	}
 	public static void  dropdownselector(WebElement e,String str) {
 		

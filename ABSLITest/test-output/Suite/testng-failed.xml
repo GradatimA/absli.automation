@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="Test(failed)">
+  <test name="Claim Process(failed)">
     <classes>
-      <class name="com.ABSLI.qa.testcases.ClaimspageTest">
+      <class name="com.ABSLI.qa.testcases.cliam.gps.Intimationtest">
         <methods>
-          <include name="CreateClaims"/>
-          <include name="logintest"/>
+          <include name="CreateClaims" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="endUp"/>
+        </methods>
+      </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Intimationtest -->
+      <class name="com.ABSLI.qa.testcases.cliam.gps.Assessmenttest">
+        <methods>
+          <include name="ClaimsAssessment" invocation-numbers="0"/>
+          <include name="endUp"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.ABSLI.qa.testcases.ClaimspageTest -->
+      </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Assessmenttest -->
+      <class name="com.ABSLI.qa.testcases.cliam.gps.Registrationtest">
+        <methods>
+          <include name="setup"/>
+          <include name="endUp"/>
+          <include name="RegistrationTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Registrationtest -->
+      <class name="com.ABSLI.qa.testcases.cliam.gps.Approvaltest">
+        <methods>
+          <include name="setup"/>
+          <include name="Approvetest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Approvaltest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Claim Process(failed) -->
 </suite> <!-- Failed suite [Suite] -->

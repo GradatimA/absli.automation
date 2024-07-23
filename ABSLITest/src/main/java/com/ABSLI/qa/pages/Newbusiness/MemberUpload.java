@@ -53,25 +53,25 @@ public class MemberUpload extends AbsliParent {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void memberuploadprocess() throws Throwable {
+	public void memberuploadprocess(String clinam,String masternum,String Agreenum,String Authorsign,String path) throws Throwable {
 		
-	ClientName.sendKeys("Automation");
+	ClientName.sendKeys(clinam);
 	Thread.sleep(3000);
 	ClientName.sendKeys(Keys.ARROW_DOWN,Keys.ENTER);
 	Thread.sleep(3000);
 	masterPolicynum.click();
 	Thread.sleep(3000);
-	inputBox.sendKeys("AUTGPOY202400022193 ( 31/03/2025)",Keys.ENTER);
+	inputBox.sendKeys(masternum,Keys.ENTER);
 	wait.until(ExpectedConditions.elementToBeClickable(Agreementnum));
 	Agreementnum.click();
 	Thread.sleep(3000);
-	inputBox.sendKeys("232124",Keys.ENTER);
+	inputBox.sendKeys(Agreenum,Keys.ENTER);
 	Thread.sleep(3000);
 	autorisedsign.click();
 	Thread.sleep(3000);
-	inputBox.sendKeys("Diana Dsouza",Keys.ENTER);
+	inputBox.sendKeys(Authorsign,Keys.ENTER);
 	Thread.sleep(3000);
-	choosefile.sendKeys("C:\\Users\\Mallikandan E\\Documents\\New Member Addition Template 05-07-01.xlsx");
+	choosefile.sendKeys(path);
 	Thread.sleep(2000);
 	Uploadfile.click();
 	Thread.sleep(5000);
@@ -81,23 +81,26 @@ public class MemberUpload extends AbsliParent {
 	OkButton.click();
 	}
 	
-	public void defectdataprocess() throws Throwable {
+	public void defectdataprocess(String clinam,String masternum,String Agreenum) throws Throwable {
 		Thread.sleep(3000);
-		defclientname.sendKeys("Automation");
+		defclientname.sendKeys(clinam);
 		Thread.sleep(3000);
 		defclientname.sendKeys(Keys.ARROW_DOWN,Keys.ENTER);
 		Thread.sleep(3000);
 		masterPolicynum.click();
 		Thread.sleep(3000);
-		inputBox.sendKeys("AUTGPOY202400022193 ( 31/03/2025)",Keys.ENTER);
+		inputBox.sendKeys(masternum,Keys.ENTER);
 		wait.until(ExpectedConditions.elementToBeClickable(Agreementnum));
 		Agreementnum.click();
 		Thread.sleep(3000);
-		inputBox.sendKeys("232124",Keys.ENTER);
+		inputBox.sendKeys(Agreenum,Keys.ENTER);
 		Thread.sleep(3000);
 		SearchButton.click();
-		
-		if(failurerecord.equals(0))
+		String textValue = failurerecord.getText();
+		String storedValue = textValue;
+	    int intValue = Integer.parseInt(storedValue);
+		System.out.println(intValue);
+		if(intValue == 0)
 		{
 			System.out.println("The member successfully upolad");
 			
@@ -105,6 +108,7 @@ public class MemberUpload extends AbsliParent {
 		else
 		{
 			failurerecord.click();
+			
 		}
 		
 	}

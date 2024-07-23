@@ -58,7 +58,7 @@ public class AbsliParent {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(AbsliUtill.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(AbsliUtill.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+		wait = new WebDriverWait(driver, Duration.ofMillis(180000));
 		driver.get(prop.getProperty("url"));
 	}
 	public static void end()

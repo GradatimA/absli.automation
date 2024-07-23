@@ -100,12 +100,44 @@ public class Homepage extends AbsliParent {
 	@FindBy(xpath = "//a[normalize-space()='Voluntary Member Upload']")
 	WebElement Voluntarymemupload;
 	
+	@FindBy(xpath = "//a[normalize-space()='Voluntary Defect Data']")
+	WebElement Voluntarydefectdata;
+	
+	@FindBy(xpath = "//a[normalize-space()='Nischint NB Upload']")
+	WebElement NischintNBUpload;
+	
+	@FindBy(xpath = "//a[normalize-space()='Nischint NB Defect Data']")
+	WebElement NischintDefeactData;
 	
 	
+	@FindBy(xpath = "//body/form[@id='frm']/div[@id='wrapper']/nav[@id='sidebar_wrapper']"
+			+ "/ul[@class='nav sidebar-nav']/li[@id='liEndorsement']/a[1]")
+	WebElement Endorsement;
 	
+	@FindBy(xpath = "//a[contains(text(),'Member Addition – File Upload')]")
+	WebElement MemberAddition;
 	
+	@FindBy(xpath = "//a[contains(text(),'Member Deletion – File Upload')]")
+	WebElement MemberDeletion;
 	
+	@FindBy(xpath = "//a[@href='../Endorsement/FSAEndorsement?Type=A']")
+	WebElement SumAssured;
+	
+	@FindBy(xpath = "//a[contains(text(),'Decrease Sum Assured – File Upload')]")
+	WebElement Decreasesum;
+	
+	@FindBy(xpath ="//a[normalize-space()='Non Monetary - File Upload']")
+	WebElement Nonmonetary;
+	
+	@FindBy(xpath = "//a[normalize-space()='Client File New Upload']")
+	WebElement clientfilenewupload;
 
+	@FindBy(xpath = "//li[@id='liRenewal']//a[@class='first-link']")
+	WebElement Renewal;
+	
+	@FindBy(xpath = "//a[normalize-space()='Renewal Member Upload']")
+	WebElement renewalmemberupload;
+	
 	
 	public Homepage() {
 		PageFactory.initElements(driver, this);
@@ -227,5 +259,75 @@ public class Homepage extends AbsliParent {
 		wait.until(ExpectedConditions.elementToBeClickable(Voluntarymemupload));
 		Voluntarymemupload.click();
 	}
+	public void Voluntarydefectdata() {
+		wait.until(ExpectedConditions.elementToBeClickable(Newbusiness));
+		Newbusiness.click();
+		wait.until(ExpectedConditions.elementToBeClickable(Voluntarydefectdata));
+		Voluntarydefectdata.click();
+	}
 	
+	public void nischintMemberUploading() 
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(Newbusiness));
+		Newbusiness.click();
+		wait.until(ExpectedConditions.elementToBeClickable(NischintNBUpload));
+		NischintNBUpload.click();
+	}
+	
+	public void nischintdefectdata() 
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(Newbusiness));
+		Newbusiness.click();
+		wait.until(ExpectedConditions.elementToBeClickable(NischintDefeactData));
+		NischintDefeactData.click();
+	}
+	public void memberaddition() {
+		wait.until(ExpectedConditions.elementToBeClickable(Endorsement));
+		Endorsement.click();
+		wait.until(ExpectedConditions.elementToBeClickable(MemberAddition));
+		MemberAddition.click();
+	}
+	public void memberdeletion() {
+		wait.until(ExpectedConditions.elementToBeClickable(Endorsement));
+		Endorsement.click();
+		wait.until(ExpectedConditions.elementToBeClickable(MemberDeletion));
+		MemberDeletion.click();
+	}
+	
+	public void sumassured() throws Throwable {
+		wait.until(ExpectedConditions.elementToBeClickable(Endorsement));
+		Endorsement.click();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(SumAssured));
+		SumAssured.click();
+	}
+	
+	public void decreasesum() throws Throwable {
+		wait.until(ExpectedConditions.elementToBeClickable(Endorsement));
+		Endorsement.click();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(Decreasesum));
+		Decreasesum.click();
+	}
+	
+	public void nonmonetaryupload() throws Throwable {
+		wait.until(ExpectedConditions.elementToBeClickable(Endorsement));
+		Endorsement.click();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(Nonmonetary));
+		Nonmonetary.click();
+	}
+	public void fileuploadprocess() throws Throwable  {
+		wait.until(ExpectedConditions.elementToBeClickable(Endorsement));
+		Endorsement.click();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(clientfilenewupload));
+		clientfilenewupload.click();
+	}
+	public void renewalprocess() {
+		wait.until(ExpectedConditions.elementToBeClickable(Renewal));
+		Renewal.click();
+		wait.until(ExpectedConditions.elementToBeClickable(renewalmemberupload));
+		renewalmemberupload.click();
+	}
 }

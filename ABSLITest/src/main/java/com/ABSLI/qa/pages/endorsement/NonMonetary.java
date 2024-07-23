@@ -1,4 +1,4 @@
-package com.ABSLI.qa.pages.Newbusiness;
+package com.ABSLI.qa.pages.endorsement;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.ABSLI.qa.base.AbsliParent;
 
-public class VoluntaryMemberUpload extends AbsliParent {
+public class NonMonetary extends AbsliParent {
 
 	@FindBy(id = "ContentPlaceHolder1_txtGroupName")
 	WebElement ClientName;
@@ -18,9 +18,6 @@ public class VoluntaryMemberUpload extends AbsliParent {
 
 	@FindBy(xpath = "//span[@id='select2-ContentPlaceHolder1_ddlAgreementNo-container']")
 	WebElement Agreementnum;
-
-	@FindBy(xpath = "//span[@id='select2-ContentPlaceHolder1_ddlAuthorisedSignatory-container']")
-	WebElement autorisedsign;
 
 	@FindBy(id = "ContentPlaceHolder1_fuLogo")
 	WebElement choosefile;
@@ -37,23 +34,11 @@ public class VoluntaryMemberUpload extends AbsliParent {
 	@FindBy(xpath = "//button[@type='button'][@class='ui-button ui-corner-all ui-widget']")
 	WebElement OkButton;
 
-	@FindBy(id = "ContentPlaceHolder1_btnSearch")
-	WebElement SearchButton;
-
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtCompanyName']")
-	WebElement defclientname;
-
-	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_gvDefectsDatas_lbnSuccessRecords_0']")
-	WebElement sucessrecord;
-
-	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_gvDefectsDatas_lbnFailureRecords_0']")
-	WebElement failurerecord;
-
-	public VoluntaryMemberUpload() {
+	public NonMonetary() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void volumemupload(String clinam,String masternum,String Agreenum,String Authorsign,String path) throws Throwable {
+	public void nonmonetaryprocess(String clinam, String masternum, String Agreenum, String path) throws Throwable  {
 		ClientName.sendKeys(clinam);
 		Thread.sleep(3000);
 		ClientName.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
@@ -66,10 +51,6 @@ public class VoluntaryMemberUpload extends AbsliParent {
 		Thread.sleep(3000);
 		inputBox.sendKeys(Agreenum, Keys.ENTER);
 		Thread.sleep(3000);
-		autorisedsign.click();
-		Thread.sleep(3000);
-		inputBox.sendKeys(Authorsign, Keys.ENTER);
-		Thread.sleep(3000);
 		choosefile.sendKeys(path);
 		Thread.sleep(2000);
 		Uploadfile.click();
@@ -78,33 +59,5 @@ public class VoluntaryMemberUpload extends AbsliParent {
 		String popMsgTextValue = popMessageText.getText();
 		System.out.println("Popup Message: " + popMsgTextValue);
 		OkButton.click();
-	}
-
-	public void voluntarydefectdata(String clinam,String masternum,String Agreenum) throws Throwable {
-		Thread.sleep(3000);
-		defclientname.sendKeys(clinam);
-		Thread.sleep(3000);
-		defclientname.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-		Thread.sleep(3000);
-		masterPolicynum.click();
-		Thread.sleep(3000);
-		inputBox.sendKeys(masternum, Keys.ENTER);
-		wait.until(ExpectedConditions.elementToBeClickable(Agreementnum));
-		Agreementnum.click();
-		Thread.sleep(3000);
-		inputBox.sendKeys(Agreenum, Keys.ENTER);
-		Thread.sleep(3000);
-		SearchButton.click();
-		String textValue = failurerecord.getText();
-		String storedValue = textValue;
-		int intValue = Integer.parseInt(storedValue);
-		System.out.println(intValue);
-		if (intValue == 0) {
-			System.out.println("The member successfully upolad");
-
-		} else {
-			failurerecord.click();
-
-		}
 	}
 }

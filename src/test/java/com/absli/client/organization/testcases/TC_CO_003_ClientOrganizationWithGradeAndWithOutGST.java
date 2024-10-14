@@ -29,13 +29,13 @@ public class TC_CO_003_ClientOrganizationWithGradeAndWithOutGST extends AbsliBas
 		homePage=new HomePage();
 	}
 	
-	@DataProvider(name = "DataFromTC_CO_003")
+	@DataProvider(name = "TestDataFromTC_CO_003")
 	public Object[][] getTestDataFromTC_CO_003() {
-		Object arrobj[][] = TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\client\\organization\\Test Data For TC_CO_003.xlsx","TC_CO_003");
+		Object arrobj[][] = TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\client\\organization\\Test Data For TC_CO_003.xlsx","TC_CO_003");
 		return arrobj;
 	}
 	
-	@Test(priority = 2,dataProvider = "DataFromTC_CO_003", dataProviderClass = CreateAClientOrga.class)
+	@Test(priority = 2,dataProvider = "TestDataFromTC_CO_003", dataProviderClass = TC_CO_003_ClientOrganizationWithGradeAndWithOutGST.class)
 	public void createClientWithMandatoryFieldsAndGradeWithOutGST(String clientName, String occupation, String title, String firstName, 
 			String typeOfClient, String gstType, String pan, String changePasswordAccessValue, 
 			String servicingBranchDropDown, String marketingOfficerCode, String gradeValue,

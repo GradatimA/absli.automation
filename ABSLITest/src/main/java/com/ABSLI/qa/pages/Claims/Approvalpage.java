@@ -68,7 +68,7 @@ public class Approvalpage extends AbsliParent {
 		Thread.sleep(3000);
 		Select.click();
 		Thread.sleep(3000);
-		ApprovalButton.click();
+		//ApprovalButton.click();
 		Thread.sleep(2000);
 		driver.switchTo().alert().accept();
 		Thread.sleep(2000);

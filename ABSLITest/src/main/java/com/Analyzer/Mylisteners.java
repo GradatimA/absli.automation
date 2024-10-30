@@ -113,8 +113,5 @@ public class Mylisteners extends AbsliParent implements ITestListener {
 		extent.flush();
 		System.out.println("Test Finished: "+context.getName());
 	}
-
-
-
 		
 	}

@@ -29,6 +29,9 @@ public class Intimationpage extends AbsliParent {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtABSLIMemberID']")
 	WebElement memberid;
 
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtIntimated']")
+	WebElement AlreadyIntimation;
+
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtNBusiness']")
 	WebElement New_Claim;
 
@@ -134,14 +137,21 @@ public class Intimationpage extends AbsliParent {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnAddDocuments']")
 	WebElement AddDocument;
 
+	@FindBy(xpath = "//span[@id='select2-ContentPlaceHolder1_ddlBeneficiaryCoverage-container']")
+	WebElement coverage;
+
+	@FindBy(xpath = "//input[@type='checkbox']")
+	WebElement checkbox;
+
 	public Intimationpage() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void claimintimationProcess(String clinam, String MPolicy, String MemID, String Location, String DOE,
-			String COE, String IssameasNBorEndorsementNominees, String BeniName, String PayMode, String RelaWithInsu,
-			String Ifsccode, String AccType, String AccNum, String Sharetyp, String share, String ClmAmt, String COD,
-			String AddiDocu, String DocuName, String DocuType) throws InterruptedException, AWTException {
+	public void claimintimationProcess(String clinam, String MPolicy, String MemID, String typ, String ride,
+			String Location, String DOE, String COE, String IssameasNBorEndorsementNominees, String BeniName,
+			String PayMode, String RelaWithInsu, String Ifsccode, String AccType, String AccNum, String cover,
+			String Sharetyp, String share, String ClmAmt, String COD, String AddiDocu, String DocuName, String DocuType)
+			throws InterruptedException, AWTException {
 
 		Client_Name.sendKeys(clinam);
 		Thread.sleep(1000);
@@ -151,16 +161,43 @@ public class Intimationpage extends AbsliParent {
 		Thread.sleep(2000);
 		input.sendKeys(MPolicy, Keys.ARROW_DOWN, Keys.ENTER);
 		Thread.sleep(2000);
-	//	memberid.sendKeys(MemID);
-		New_Claim.click();
+		memberid.sendKeys(MemID);
+		Thread.sleep(2000);
+		if (typ.equals("intimation")) {
+			AlreadyIntimation.click();
+		} else {
+			New_Claim.click();
+		}
+		Thread.sleep(2000);
 		Search.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Select));
 		Select.click();
+		Thread.sleep(2000);
+		if (ride.equals("ride")) {
+			RiderClaim.click();
+			System.out.println("Rider Claim");
+		} else if (ride.equals("Base")) {
+			Base_AdditionalRiders.click();
+			System.out.println("Base&Additional Claim");
+		} else {
+			System.out.println("Death Claim");
+		}
 		wait.until(ExpectedConditions.elementToBeClickable(Location_Of_Event));
 		Location_Of_Event.sendKeys(Location, Keys.ENTER);
 		DateOfEvent.sendKeys(DOE, Keys.ENTER);
 		Claim_Intimation_Date.sendKeys(COD);
 		dropdown(Caus_of_Event, COE);
+		// Check if the checkbox is already selected
+		boolean isSelected = checkbox.isSelected();
+		System.out.println("Checkbox is selected: " + isSelected);
+		// Click the checkbox if it is not selected
+		if (!isSelected) {
+			checkbox.click();
+			System.out.println("Checkbox has been clicked.");
+		}
+		// Verify if the checkbox is now selected
+		isSelected = checkbox.isSelected();
+		System.out.println("Checkbox is selected: " + isSelected);
 		Thread.sleep(3000);
 		if (IssameasNBorEndorsementNominees.equals("Yes")) {
 			YesButton.click();
@@ -176,13 +213,26 @@ public class Intimationpage extends AbsliParent {
 			Thread.sleep(3000);
 			dropdown(RelationshipWithInsured, RelaWithInsu);
 		}
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		IFSCCode.sendKeys(Ifsccode);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		IFSCCode.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+		wait.until(ExpectedConditions.elementToBeClickable(AccountType));
 		dropdown(AccountType, AccType);
 		Thread.sleep(2000);
 		AccountNumber.sendKeys(AccNum, Keys.ENTER);
+		if (ride.equals("ride")) {
+
+			System.out.println("Rider Claim");
+		} else if (ride.equals("Base")) {
+			Thread.sleep(2000);
+			coverage.click();
+			Thread.sleep(2000);
+			input.sendKeys(cover, Keys.ARROW_DOWN, Keys.ENTER);
+			System.out.println("Base&Additional Claim");
+		} else {
+			System.out.println("Death Claim");
+		}
 		System.out.println(Sharetyp);
 		Thread.sleep(2000);
 		if (Sharetyp.equals("Percentage")) {
@@ -191,11 +241,13 @@ public class Intimationpage extends AbsliParent {
 			Share.sendKeys(share, Keys.ENTER);
 			Thread.sleep(2000);
 		} else {
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.elementToBeClickable(ClaimAmount));
 			ClaimAmount.sendKeys(ClmAmt, Keys.ENTER);
 		}
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(AddButton));
+		Thread.sleep(2000);
 		AddButton.click();
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(OkButton));
@@ -209,7 +261,7 @@ public class Intimationpage extends AbsliParent {
 		AddDocButton.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Checklist));
 		Checklist.click();
-		//wait.until(ExpectedConditions.elementToBeClickable(DocumentType));
+		// wait.until(ExpectedConditions.elementToBeClickable(DocumentType));
 		Thread.sleep(2000);
 		dropdown(DocumentType, DocuType);
 		Thread.sleep(2000);
@@ -227,6 +279,33 @@ public class Intimationpage extends AbsliParent {
 		String popMsgTextValue = popMessageText.getText();
 		System.out.println("Popup Message: " + popMsgTextValue);
 		OkButton.click();
+
+	}
+
+	public void validationclaimintimationProcess() throws Throwable
+
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(Search));
+		Search.click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(popMessageText));
+		String popMsgTextValue = popMessageText.getText();
+		System.out.println("Popup Message: " + popMsgTextValue);
+		OkButton.click();
+		Client_Name.sendKeys("cynne");
+		Thread.sleep(1000);
+		Client_Name.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+		Thread.sleep(2000);
+		Search.click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(popMessageText));
+		// String popMsgTextValue = popMessageText.getText();
+		System.out.println("Popup Message: " + popMsgTextValue);
+		OkButton.click();
+		Master_Policy_Number.click();
+		Thread.sleep(2000);
+		input.sendKeys("305", Keys.ARROW_DOWN, Keys.ENTER);
+		Thread.sleep(2000);
 
 	}
 

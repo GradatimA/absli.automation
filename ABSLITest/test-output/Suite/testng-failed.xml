@@ -5,14 +5,14 @@
     <classes>
       <class name="com.ABSLI.qa.testcases.cliam.gps.Intimationtest">
         <methods>
-          <include name="CreateClaims" invocation-numbers="0"/>
+          <include name="CreateClaims"/>
           <include name="setup"/>
           <include name="endUp"/>
         </methods>
       </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Intimationtest -->
       <class name="com.ABSLI.qa.testcases.cliam.gps.Assessmenttest">
         <methods>
-          <include name="ClaimsAssessment" invocation-numbers="0"/>
+          <include name="ClaimsAssessment"/>
           <include name="endUp"/>
           <include name="setup"/>
         </methods>
@@ -21,13 +21,13 @@
         <methods>
           <include name="setup"/>
           <include name="endUp"/>
-          <include name="RegistrationTest" invocation-numbers="0"/>
+          <include name="RegistrationTest"/>
         </methods>
       </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Registrationtest -->
       <class name="com.ABSLI.qa.testcases.cliam.gps.Approvaltest">
         <methods>
           <include name="setup"/>
-          <include name="Approvetest" invocation-numbers="0"/>
+          <include name="Approvetest"/>
         </methods>
       </class> <!-- com.ABSLI.qa.testcases.cliam.gps.Approvaltest -->
     </classes>

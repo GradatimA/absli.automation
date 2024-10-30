@@ -20,8 +20,8 @@ import com.ABSLI.qa.base.AbsliParent;
 
 public class AbsliUtill extends AbsliParent {
 
-	public static long PAGE_LOAD_TIMEOUT = 5;
-	public static long IMPLICIT_WAIT = 5;
+	public static long PAGE_LOAD_TIMEOUT = 20;
+	public static long IMPLICIT_WAIT = 20;
 
 	/*
 	 * public static void takeScreenshotAtEndOfTest(String name) throws IOException

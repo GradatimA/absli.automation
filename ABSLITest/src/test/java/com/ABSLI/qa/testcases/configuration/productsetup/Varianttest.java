@@ -24,7 +24,7 @@ public class Varianttest extends AbsliParent{
 	}
 	@DataProvider(name = "Variantdemo1")
 	public Object[][] getTestvarianttestdata() {
-		Object arrbj[][] = AbsliUtill.getDataFromExcel("C:\\Users\\Mallikandan E\\git\\Manikandan-AutomationScript\\ABSLITest\\src\\main\\java\\com\\ABSLI\\qa\\testdata\\ProductSetup.xlsx", "Sheet1");
+		Object arrbj[][] = AbsliUtill.getDataFromExcel("C:\\Users\\Mallikandan E\\git\\Manikandan-AutomationScript\\ABSLITest\\src\\main\\java\\com\\ABSLI\\qa\\testdata\\Configuration\\ProductSetup.xlsx", "Sheet1");
 		return arrbj;
 	}
 	@Test(dataProvider = "Variantdemo1",dataProviderClass = Varianttest.class)

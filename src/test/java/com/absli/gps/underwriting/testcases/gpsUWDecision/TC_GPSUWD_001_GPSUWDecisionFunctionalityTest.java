@@ -32,7 +32,7 @@ public class TC_GPSUWD_001_GPSUWDecisionFunctionalityTest extends AbsliBase {
 	@DataProvider(name = "TestDataFromTC_GPSUWD_001")
 	public Object[][] getDataFromTestDataFromTC_CUW_001()
 	{
-		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\gpsUWDecision\\Test Data For TC_GPSUWD_001.xlsx", "TC_GPSUWD_001");
+		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\gpsUWDecision\\Test Data For TC_GPSUWD_001.xlsx", "TC_GPSUWD_001");
 		return arrObj;
 	}
 	

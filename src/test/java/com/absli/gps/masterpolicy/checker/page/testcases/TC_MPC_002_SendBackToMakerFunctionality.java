@@ -33,7 +33,7 @@ public class TC_MPC_002_SendBackToMakerFunctionality  extends AbsliBase {
 	@DataProvider(name = "TestDataFromTC_MPC_002")
 	public Object[][] getTestDataFromTC_MPC_002()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicychecker\\Test Data For TC_MPC_002.xlsx", "TC_MPC_002");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicychecker\\Test Data For TC_MPC_002.xlsx", "TC_MPC_002");
 		return arrobj;
 	}
 	

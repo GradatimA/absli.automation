@@ -33,7 +33,7 @@ public class TC_MPM_097_MasterPolicyWith5BenefitsAndRidersWithVariantTypeAsMosRM
 	@DataProvider(name="TestDataFromTC_MPM_097")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_097()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_097.xlsx", "TC_MPM_097");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_097.xlsx", "TC_MPM_097");
 		return arrobj;
 	}
 	

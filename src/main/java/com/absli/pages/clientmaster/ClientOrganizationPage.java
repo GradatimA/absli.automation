@@ -289,16 +289,20 @@ public class ClientOrganizationPage extends AbsliBase {
 	}
 
 	//TC_CO_005 - Verify the Error Popup Messages for Client Organization without GST
-	public void VerifyTheErrorPopupMessagesForClientOrganizationwithoutGST() throws Throwable
+	public void VerifyTheErrorPopupMessagesForClientOrganizationwithoutGST(String existClientName, String clientName, 
+			String occuptionValue, String title, String firstNameValue, String typeofClient, String existPANNumber, String panNumberValue, String gstType, 
+			String changePasswordAccessValue, String servicingBranchValue, String marketingOfficerCodeNum, String adds1, String zipCode, 
+			String county, String state, String district) throws Throwable
 	{
 		Actions actions = null;
+
 		wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
 		addClientButton.click();
 		String popUpMessageTextValue = popupMessageText();
 
 		// Client Name
 		if (popUpMessageTextValue.equals("Please enter the Client Name.")) {
-			clientNameAdd.sendKeys("Automation Testing");
+			clientNameAdd.sendKeys(existClientName);
 			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
 			actions = new Actions(driver);
 			actions.doubleClick(addClientButton).perform();
@@ -309,7 +313,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Occupation/Trade/Business 
 		if (popUpMessageTextValue.equals("Please enter the Occupation/Trade/Business.")) {
-			occuption.sendKeys("Business");
+			occuption.sendKeys(occuptionValue);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -318,7 +322,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Salutation
 		if (popUpMessageTextValue.equals("Please select the Salutation.")) {
-			selectVisibleText(titleDropdown, "Mr");
+			selectVisibleText(titleDropdown, title);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -327,7 +331,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//First Name
 		if (popUpMessageTextValue.equals("Please enter the Contact Person First Name.")) {
-			firstName.sendKeys("Absli");
+			firstName.sendKeys(firstNameValue);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -336,7 +340,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Type Of Client
 		if (popUpMessageTextValue.equals("Please select the Type Of Client.")) {
-			selectVisibleText(typeOfClientDropDown, "Regular Customer");
+			selectVisibleText(typeOfClientDropDown, typeofClient);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -345,7 +349,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//GST Type
 		if (popUpMessageTextValue.equals("Please select the GST Type.")) {
-			selectVisibleText(gstTypeForRegular, "NO GST");
+			selectVisibleText(gstTypeForRegular, gstType);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -354,8 +358,8 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		// PAN Number
 		if (popUpMessageTextValue.equals("Please enter the PAN Number.")) {
-			panNumber.sendKeys("CDEFG1234H");
-			Thread.sleep(3000);
+			panNumber.sendKeys(existPANNumber);
+			Thread.sleep(2000);
 			actions.doubleClick(addClientButton).perform();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -364,7 +368,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Change Password access required at claim portal
 		if (popUpMessageTextValue.equals("Please select the Change Password access required at claim portal")) {
-			selectVisibleText(changePasswordAccessRequiredAtclaimPortalDropDown, "No");
+			selectVisibleText(changePasswordAccessRequiredAtclaimPortalDropDown, changePasswordAccessValue);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -373,7 +377,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Servicing Branch
 		if (popUpMessageTextValue.equals("Please select the Servicing Branch.")) {
-			selectVisibleText(servicingBranch, "Bangalore");
+			selectVisibleText(servicingBranch, servicingBranchValue);
 			addClientButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -382,7 +386,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Marketing Officer Code 
 		if (popUpMessageTextValue.equals("Please enter the Marketing Officer Code.")) {
-			marketingOfficerCode.sendKeys("132430",Keys.ENTER);
+			marketingOfficerCode.sendKeys(marketingOfficerCodeNum,Keys.ENTER);
 			Thread.sleep(3000);
 			actions.doubleClick(addClientButton).perform();
 			popUpMessageTextValue = popupMessageText();
@@ -400,7 +404,7 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Address 1
 		if (popUpMessageTextValue.equals("Please enter the Address 1.")) {
-			address1.sendKeys("BTM");
+			address1.sendKeys(adds1);
 			addAddressButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -409,10 +413,11 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Pin Code / Zip Code
 		if (popUpMessageTextValue.equals("Please enter the Pin Code / Zip Code.")) {
-			pinCode.sendKeys("560076",Keys.ENTER);
+			pinCode.sendKeys(zipCode,Keys.ENTER);
 			Thread.sleep(2000);
 			selectVisibleText(countryDropDown, "---Select---");
-			Thread.sleep(3000);
+			//			Thread.sleep(3000);
+			wait.until(ExpectedConditions.elementToBeClickable(addAddressButton));
 			addAddressButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -421,7 +426,8 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//Country 
 		if (popUpMessageTextValue.equals("Please Select the Country.")) {
-			selectVisibleText(countryDropDown, "India");
+			selectVisibleText(countryDropDown, county);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
 			addAddressButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -430,7 +436,8 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//State
 		if (popUpMessageTextValue.equals("Please Select the State.")) {
-			selectVisibleText(stateDropDown, "Karnataka");
+			selectVisibleText(stateDropDown, state);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
 			addAddressButton.click();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -439,7 +446,8 @@ public class ClientOrganizationPage extends AbsliBase {
 
 		//District 
 		if (popUpMessageTextValue.equals("Please select the District.")) {
-			selectVisibleText(districtDropDown, "Bangalore");
+			selectVisibleText(districtDropDown, district);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
 			addAddressButton.click();
 			popUpMessageTextValue = popupMessageText();
 			addClientButton.click();
@@ -448,11 +456,10 @@ public class ClientOrganizationPage extends AbsliBase {
 			System.out.println("District popup message is Wrong or Not Present");
 		}
 
-
 		//Exist Client Name
 		if (popUpMessageTextValue.equals("Client Name Already Exist.")) {
 			clientNameAdd.clear();
-			clientNameAdd.sendKeys("Automation Testing-001");
+			clientNameAdd.sendKeys(clientName);
 			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
 			actions = new Actions(driver);
 			actions.doubleClick(addClientButton).perform();
@@ -460,12 +467,13 @@ public class ClientOrganizationPage extends AbsliBase {
 		} else {
 			System.out.println("Exist Client Name popup message popup message is Wrong or Not Present");
 		}
-		
+
 		//Exist PAN Number
 		if (popUpMessageTextValue.equals("PAN Number Already Exist.")) {
 			panNumber.clear();
-			panNumber.sendKeys("WXYZA0123R",Keys.ENTER);
 			Thread.sleep(4000);
+			panNumber.sendKeys(panNumberValue,Keys.ENTER);
+			Thread.sleep(2000);
 			actions.doubleClick(addClientButton).perform();
 			popUpMessageTextValue = popupMessageText();
 		} else {
@@ -473,5 +481,221 @@ public class ClientOrganizationPage extends AbsliBase {
 		}
 	}
 
+	//TC_CO_006 - Verify the Error Popup Messages for Client Organization with GST
+	public void VerifyTheErrorPopupMessagesForClientOrganizationwithGST(String existClientName, String clientName, 
+			String occuptionValue, String title, String firstNameValue, String typeofClient, String existPANNumber, 
+			String panNumberValue, String invalidGSTNumber, String existGSTNumber, String validGSTNumber, String gstType, String changePasswordAccessValue, 
+			String servicingBranchValue, String marketingOfficerCodeNum, String adds1, String zipCode, String county, String state, 
+			String district) throws Throwable
+	{
+		Actions actions = null;
+
+		wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
+		addClientButton.click();
+		String popUpMessageTextValue = popupMessageText();
+		if (popUpMessageTextValue.equals("Please enter the Client Name.")) {
+			clientNameAdd.sendKeys(existClientName);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
+			actions = new Actions(driver);
+			actions.doubleClick(addClientButton).perform();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Client Name popup message popup message is Wrong or Not Present");
+		}
+
+		//Occupation/Trade/Business 
+		if (popUpMessageTextValue.equals("Please enter the Occupation/Trade/Business.")) {
+			occuption.sendKeys(occuptionValue);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Occupation/Trade/Business popup message popup message is Wrong or Not Present");
+		}
+
+		//Salutation
+		if (popUpMessageTextValue.equals("Please select the Salutation.")) {
+			selectVisibleText(titleDropdown, title);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Salutation popup message is Wrong or Not Present");
+		}
+
+		//First Name
+		if (popUpMessageTextValue.equals("Please enter the Contact Person First Name.")) {
+			firstName.sendKeys(firstNameValue);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("First Name popup message is Wrong or Not Present");
+		}
+
+		//Type Of Client
+		if (popUpMessageTextValue.equals("Please select the Type Of Client.")) {
+			selectVisibleText(typeOfClientDropDown, typeofClient);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Type Of Client popup message is Wrong or Not Present");
+		}
+
+		//GST Type
+		if (popUpMessageTextValue.equals("Please select the GST Type.")) {
+			selectVisibleText(gstTypeForRegular, gstType);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("GST Type popup message is Wrong or Not Present");
+		}
+
+		// PAN Number
+		if (popUpMessageTextValue.equals("Please enter the PAN Number.")) {
+			panNumber.sendKeys(existPANNumber,Keys.ENTER);
+			Thread.sleep(2000);
+			actions.doubleClick(addClientButton).perform();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("PAN Number popup message is Wrong or Not Present");
+		}
+
+		// GSTIN 
+		if (popUpMessageTextValue.equals("Please enter the GSTIN."))
+		{
+			gstNumber.sendKeys(invalidGSTNumber,Keys.ENTER);
+			addClientButton.click();
+			popUpMessageTextValue=driver.switchTo().alert().getText();
+			System.out.println("Popup Message: "+popUpMessageTextValue);
+			//			TestUtill.takeScreenshotAtEndOfTest(popUpTextMessage);
+
+			//PAN Mismatch in GSTIN
+			if (popUpMessageTextValue.equals("PAN Mismatch in GSTIN")) {
+				driver.switchTo().alert().accept();
+				gstNumber.sendKeys(existGSTNumber);
+				addClientButton.click();
+				popUpMessageTextValue = popupMessageText();
+			} else {
+				System.out.println("PAN Mismatch in GSTIN popup message is Wrong or Not Present");
+			}
+		} else {
+			System.out.println("GSTIN popup message is Wrong or Not Present");
+		}
+
+		//Change Password access required at claim portal
+		if (popUpMessageTextValue.equals("Please select the Change Password access required at claim portal")) {
+			selectVisibleText(changePasswordAccessRequiredAtclaimPortalDropDown, changePasswordAccessValue);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Change Password access required at claim portal popup message is Wrong or Not Present");
+		}
+
+		//Servicing Branch
+		if (popUpMessageTextValue.equals("Please select the Servicing Branch.")) {
+			selectVisibleText(servicingBranch, servicingBranchValue);
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Servicing Branch popup message is Wrong or Not Present");
+		}
+
+		//Marketing Officer Code 
+		if (popUpMessageTextValue.equals("Please enter the Marketing Officer Code.")) {
+			marketingOfficerCode.sendKeys(marketingOfficerCodeNum,Keys.ENTER);
+			Thread.sleep(4000);
+			actions.doubleClick(addClientButton).perform();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Marketing Officer Code popup message is Wrong or Not Present");
+		}
+
+		//Address Details
+		if (popUpMessageTextValue.equals("Please Add Address Details.")) {
+			addAddressButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Address Details popup message is Wrong or Not Present");
+		}
+
+		//Address 1
+		if (popUpMessageTextValue.equals("Please enter the Address 1.")) {
+			address1.sendKeys(adds1);
+			addAddressButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Address 1 popup message is Wrong or Not Present");
+		}
+
+		//Pin Code / Zip Code
+		if (popUpMessageTextValue.equals("Please enter the Pin Code / Zip Code.")) {
+			pinCode.sendKeys(zipCode,Keys.ENTER);
+			Thread.sleep(2000);
+			selectVisibleText(countryDropDown, "---Select---");
+			//			Thread.sleep(3000);
+			wait.until(ExpectedConditions.elementToBeClickable(addAddressButton));
+			addAddressButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Pin Code / Zip Code popup message is Wrong or Not Present");
+		}
+
+		//Country 
+		if (popUpMessageTextValue.equals("Please Select the Country.")) {
+			selectVisibleText(countryDropDown, county);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
+			addAddressButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Country popup message is Wrong or Not Present");
+		}
+
+		//State
+		if (popUpMessageTextValue.equals("Please Select the State.")) {
+			selectVisibleText(stateDropDown, state);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
+			addAddressButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Country popup message is Wrong or Not Present");
+		}
+
+		//District 
+		if (popUpMessageTextValue.equals("Please select the District.")) {
+			selectVisibleText(districtDropDown, district);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
+			addAddressButton.click();
+			popUpMessageTextValue = popupMessageText();
+			addClientButton.click();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("District popup message is Wrong or Not Present");
+		}
+
+		//Exist Client Name
+		if (popUpMessageTextValue.equals("Client Name Already Exist.")) {
+			clientNameAdd.clear();
+			clientNameAdd.sendKeys(clientName);
+			wait.until(ExpectedConditions.elementToBeClickable(addClientButton));
+			actions.doubleClick(addClientButton).perform();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Exist Client Name popup message popup message is Wrong or Not Present");
+		}
+
+		//Exist PAN Number
+		if (popUpMessageTextValue.equals("PAN Number Already Exist.")) {
+			panNumber.clear();
+			Thread.sleep(4000);
+			panNumber.sendKeys(panNumberValue,Keys.ENTER);
+			Thread.sleep(2000);
+			gstNumber.sendKeys(validGSTNumber);
+			actions.doubleClick(addClientButton).perform();
+			popUpMessageTextValue = popupMessageText();
+		} else {
+			System.out.println("Exist PAN Number popup message is Wrong or Not Present");
+		}
+
+	}
+	
+	
 }
 

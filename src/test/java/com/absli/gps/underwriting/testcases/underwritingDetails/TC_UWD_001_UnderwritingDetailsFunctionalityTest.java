@@ -32,7 +32,7 @@ public class TC_UWD_001_UnderwritingDetailsFunctionalityTest extends AbsliBase {
 	@DataProvider(name = "TestDataFromTC_UWD_001")
 	public Object[][] getDataFromTestDataFromTC_UWD_001()
 	{
-		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingDetails\\Test Data For TC_UWD_001.xlsx", "TC_UWD_001");
+		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingDetails\\Test Data For TC_UWD_001.xlsx", "TC_UWD_001");
 		return arrObj;
 	}
 	

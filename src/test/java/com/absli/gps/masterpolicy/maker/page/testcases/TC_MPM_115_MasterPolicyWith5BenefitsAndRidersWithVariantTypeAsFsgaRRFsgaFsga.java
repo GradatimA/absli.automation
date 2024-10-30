@@ -33,7 +33,7 @@ public class TC_MPM_115_MasterPolicyWith5BenefitsAndRidersWithVariantTypeAsFsgaR
 	@DataProvider(name="TestDataFromTC_MPM_115")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_115()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_115.xlsx", "TC_MPM_115");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_115.xlsx", "TC_MPM_115");
 		return arrobj;
 	}
 	

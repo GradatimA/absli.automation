@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST">
+      <class name="com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST">
         <methods>
+          <include name="VerifyErrorPopupMessagesForClientOrganizationWithGST" invocation-numbers="0"/>
           <include name="setUp"/>
-          <include name="createClientWithMandatoryFieldsAndWithoutGST"/>
-          <include name="endUp"/>
         </methods>
-      </class> <!-- com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST -->
+      </class> <!-- com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

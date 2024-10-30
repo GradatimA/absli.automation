@@ -28,7 +28,7 @@ public class TC_UWMT_001_UnderwritingMedicalTestFunctionalityTest extends AbsliB
 	@DataProvider(name = "TestDataFromTC_UW_MT_001")
 	public Object[][] getDataFromTestDataFromTC_UW_MT_001()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingMedicalTest\\Test Data For TC_UW_MT_001.xlsx", "TC_UW_MT_001");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingMedicalTest\\Test Data For TC_UW_MT_001.xlsx", "TC_UW_MT_001");
 		return arrobj;
 	}
 	

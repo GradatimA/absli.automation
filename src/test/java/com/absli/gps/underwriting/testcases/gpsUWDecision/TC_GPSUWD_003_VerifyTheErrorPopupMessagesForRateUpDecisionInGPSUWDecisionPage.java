@@ -33,7 +33,7 @@ public class TC_GPSUWD_003_VerifyTheErrorPopupMessagesForRateUpDecisionInGPSUWDe
 	@DataProvider(name = "TestDataFromTC_GPSUWD_003")
 	public Object[][] getDataFromTestDataFromTC_CUW_003()
 	{
-		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\gpsUWDecision\\Test Data For TC_GPSUWD_003.xlsx", "TC_GPSUWD_003");
+		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\gpsUWDecision\\Test Data For TC_GPSUWD_003.xlsx", "TC_GPSUWD_003");
 		return arrObj;
 	}
 

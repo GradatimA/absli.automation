@@ -34,7 +34,7 @@ public class TC_MPM_002_MasterPolicyMakerWithGPSBaseBenefitAndFlatSumAssured ext
 	@DataProvider(name="TestDataFromTC_MPM_002")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_002()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_002.xlsx", "TC_MPM_002");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_002.xlsx", "TC_MPM_002");
 		return arrobj;
 				
 	}

@@ -33,7 +33,7 @@ public class TC_MPM_130_VerifyTheErrorPopUpMessagesForGradedCover extends AbsliB
 	@DataProvider(name="TestDataFromTC_MPM_130")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_130()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_130.xlsx", "TC_MPM_130");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_130.xlsx", "TC_MPM_130");
 		return arrobj;
 	}
 	

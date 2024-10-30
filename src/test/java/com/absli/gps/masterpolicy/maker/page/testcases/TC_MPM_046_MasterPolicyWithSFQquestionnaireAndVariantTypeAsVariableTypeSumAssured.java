@@ -33,7 +33,7 @@ public class TC_MPM_046_MasterPolicyWithSFQquestionnaireAndVariantTypeAsVariable
 	@DataProvider(name="TestDataFromTC_MPM_046")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_046()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_046.xlsx", "TC_MPM_046");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_046.xlsx", "TC_MPM_046");
 		return arrobj;			
 	}
 	

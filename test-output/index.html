@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-skipped">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Gokulnath\AppData\Local\Temp\testng-eclipse-1370938486\testng-customsuite.xml</span>
+                    <span>C:\Users\Gokulnath\AppData\Local\Temp\testng-eclipse--1466317972\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST" class="method navigator-link" hash-for-method="createClientWithMandatoryFieldsAndWithoutGST(Demo-Auto-003, Business , Mr, Absli-KT-01, SEZ customer, CDEFG1234H, NO GST PAYABLE, No, Bangalore, ...)">createClientWithMandatoryFieldsAndWithoutGST(Demo-Auto-003, Business , Mr, Absli-KT-01, SEZ customer, CDEFG1234H, NO GST PAYABLE, No, Bangalore, ...)</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST" class="method navigator-link" hash-for-method="VerifyErrorPopupMessagesForClientOrganizationWithGST(Automation Testing, Auto-Testing-002, Business , Mr, Absli, Regular Customer, WXYZA0123R, YZABC4567S...)">VerifyErrorPopupMessagesForClientOrganizationWithGST(Automation Testing, Auto-Testing-002, Business , Mr, Absli, Regular Customer, WXYZA0123R, YZABC4567S...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,47 +118,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-skipped">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createClientWithMandatoryFieldsAndWithoutGST(Demo-Auto-003, Business , Mr, Absli-KT-01, SEZ customer, CDEFG1234H, NO GST PAYABLE, No, Bangalore, ...)">
-                  </a> <!-- createClientWithMandatoryFieldsAndWithoutGST(Demo-Auto-003, Business , Mr, Absli-KT-01, SEZ customer, CDEFG1234H, NO GST PAYABLE, No, Bangalore, ...) -->
-                  <span class="method-name">createClientWithMandatoryFieldsAndWithoutGST</span>
-                  <span class="parameters">(Demo-Auto-003,Business ,Mr,Absli-KT-01,SEZ customer,CDEFG1234H,NO GST PAYABLE,No,Bangalore,132430,BTM,BTM,560076.0,India,Karnataka,Bangalore)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.014
-  (Session info: chrome=124.0.6367.63)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b954a7aec5b8380df29329cb49ede285, get {url=http://203.92.57.234/ABSLI/Account/Login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\GOKULN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50693}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50693/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b954a7aec5b8380df29329cb49ede285
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at com.absli.base.AbsliBase.initialization(AbsliBase.java:73)
-	at com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST.setUp(TC_CO_001_ClientOrganizationWithOutGST.java:26)
+                  <a name="VerifyErrorPopupMessagesForClientOrganizationWithGST(Automation Testing, Auto-Testing-002, Business , Mr, Absli, Regular Customer, WXYZA0123R, YZABC4567S...)">
+                  </a> <!-- VerifyErrorPopupMessagesForClientOrganizationWithGST(Automation Testing, Auto-Testing-002, Business , Mr, Absli, Regular Customer, WXYZA0123R, YZABC4567S...) -->
+                  <span class="method-name">VerifyErrorPopupMessagesForClientOrganizationWithGST</span>
+                  <span class="parameters">(Automation Testing,Auto-Testing-002,Business ,Mr,Absli,Regular Customer,WXYZA0123R,YZABC4567S,29HIJKL0123Z1Z1,29WXYZA0123R123,29YZABC4567S1Z4,GST,No,Bangalore,132430,BTM,560076.0,India,Karnataka,Bangalore)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[text()=&apos;Ok&apos;]&apos; (tried for 2 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.absli.pages.clientmaster.ClientOrganizationPage.popupMessageText(ClientOrganizationPage.java:100)
+	at com.absli.pages.clientmaster.ClientOrganizationPage.VerifyTheErrorPopupMessagesForClientOrganizationwithGST(ClientOrganizationPage.java:606)
+	at com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST.VerifyErrorPopupMessagesForClientOrganizationWithGST(TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST.java:48)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
@@ -181,16 +162,49 @@ Session ID: b954a7aec5b8380df29329cb49ede285
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Ok&apos;]&quot;}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d147f0800d3d24ebf095e2867827dc56, findElement {value=//button[text()=&apos;Ok&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\GOKULN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63691}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63691/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d147f0800d3d24ebf095e2867827dc56
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 29 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Gokulnath\AppData\Local\Temp\testng-eclipse-1370938486\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Gokulnath\AppData\Local\Temp\testng-eclipse--1466317972\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -199,11 +213,11 @@ Session ID: b954a7aec5b8380df29329cb49ede285
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST&quot;&gt;
+      &lt;class name=&quot;com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createClientWithMandatoryFieldsAndWithoutGST&quot;/&gt;
+          &lt;include name=&quot;VerifyErrorPopupMessagesForClientOrganizationWithGST&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST --&gt;
+      &lt;/class&gt; &lt;!-- com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -245,14 +259,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createClientWithMandatoryFieldsAndWithoutGST')
-data.setCell(0, 2, 'com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST')
-data.setCell(0, 3, 1);
+data.setCell(0, 1, 'VerifyErrorPopupMessagesForClientOrganizationWithGST')
+data.setCell(0, 2, 'com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST')
+data.setCell(0, 3, 121127);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 ms</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -278,13 +292,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.absli.client.organization.testcases.TC_CO_001_ClientOrganizationWithOutGST</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.absli.client.organization.testcases.TC_CO_006_VerifyTheErrorPopupMessagesForClientOrganizationWithGST</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VerifyErrorPopupMessagesForClientOrganizationWithGST(Automation Testing, Auto-Testing-002, Business , Mr, Absli, Regular Customer, WXYZA0123R, YZABC4567S...)</span>
+                <span class="method-start">18176 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

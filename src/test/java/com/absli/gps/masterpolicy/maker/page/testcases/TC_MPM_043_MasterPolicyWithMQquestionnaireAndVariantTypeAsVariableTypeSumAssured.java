@@ -34,7 +34,7 @@ public class TC_MPM_043_MasterPolicyWithMQquestionnaireAndVariantTypeAsVariableT
 	@DataProvider(name="TestDataFromTC_MPM_043")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_043()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_043.xlsx", "TC_MPM_043");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_043.xlsx", "TC_MPM_043");
 		return arrobj;			
 	}
 	

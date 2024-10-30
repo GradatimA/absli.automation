@@ -29,7 +29,7 @@ public class ErrorPopupMessage extends AbsliBase  {
 	@DataProvider(name="TestDataFromErrorPopupMsg")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_001()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\Master Policy Maker - Test Data.xlsx", "Error Popup Msg");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\Master Policy Maker - Test Data.xlsx", "Error Popup Msg");
 		return arrobj;			
 	}
 

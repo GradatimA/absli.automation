@@ -34,7 +34,7 @@ public class TC_UWD_002_VerifyTheErrorPopupMessagesInUWDetailsPage extends Absli
 	@DataProvider(name = "TestDataFromTC_UWD_002")
 	public Object[][] getDataFromTestDataFromTC_UWD_002()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingDetails\\Test Data For TC_UWD_002.xlsx", "TC_UWD_002");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingDetails\\Test Data For TC_UWD_002.xlsx", "TC_UWD_002");
 		return arrobj;
 	}
 	

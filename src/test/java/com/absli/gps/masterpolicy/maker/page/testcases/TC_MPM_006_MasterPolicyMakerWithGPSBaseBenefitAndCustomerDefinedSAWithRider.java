@@ -33,7 +33,7 @@ public class TC_MPM_006_MasterPolicyMakerWithGPSBaseBenefitAndCustomerDefinedSAW
 	@DataProvider(name="TestDataFromTC_MPM_006")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_006()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_006.xlsx", "TC_MPM_006");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_006.xlsx", "TC_MPM_006");
 		return arrobj;
 				
 	}

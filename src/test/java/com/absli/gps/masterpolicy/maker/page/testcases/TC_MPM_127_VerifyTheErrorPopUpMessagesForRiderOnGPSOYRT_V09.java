@@ -32,7 +32,7 @@ public class TC_MPM_127_VerifyTheErrorPopUpMessagesForRiderOnGPSOYRT_V09 extends
 	@DataProvider(name="TestDataFromTC_MPM_127")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_127()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_127.xlsx", "TC_MPM_127");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_127.xlsx", "TC_MPM_127");
 		return arrobj;
 	}
 	

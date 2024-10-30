@@ -34,7 +34,7 @@ public class TC_MPM_055_MasterPolicyWithEmployerEmployeeNischintAnd2BenefitAndRi
 	@DataProvider(name="TestDataFromTC_MPM_055")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_055()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_055.xlsx", "TC_MPM_055");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_055.xlsx", "TC_MPM_055");
 		return arrobj;
 				
 	}

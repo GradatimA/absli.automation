@@ -32,7 +32,7 @@ public class TC_CUW_002_VerifyTheErrorPopupMessagesForStandardRateInCoreUW exten
 	@DataProvider(name = "TestDataFromTC_CUW_002")
 	public Object[][] getDataFromTestDataFromTC_CUW_002()
 	{
-		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\CoreUW\\Test Data For TC_CUW_002.xlsx", "TC_CUW_002");
+		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\CoreUW\\Test Data For TC_CUW_002.xlsx", "TC_CUW_002");
 		return arrObj;
 	}
 	

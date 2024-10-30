@@ -31,7 +31,7 @@ public class TC_MPC_001_MasterPolicyCheckerFunctionalityTest extends AbsliBase {
 	@DataProvider(name = "TestDataFromTC_MPC_001")
 	public Object[][] getTestDataFromTC_MPC_001()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicychecker\\Test Data For TC_MPC_001.xlsx", "TC_MPC_001");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicychecker\\Test Data For TC_MPC_001.xlsx", "TC_MPC_001");
 		return arrobj;
 	}
 	

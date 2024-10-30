@@ -33,7 +33,7 @@ public class TC_UWMT_002_VerifyTheErrorPopupMessagesInUnderwritingMedicalTest ex
 	@DataProvider(name = "TestDataFromTC_UW_MT_002")
 	public Object[][] getDataFromTestDataFromTC_UW_MT_002()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingMedicalTest\\Test Data For TC_UW_MT_002.xlsx", "TC_UW_MT_002");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\underwritingMedicalTest\\Test Data For TC_UW_MT_002.xlsx", "TC_UW_MT_002");
 		return arrobj;
 	}
 	

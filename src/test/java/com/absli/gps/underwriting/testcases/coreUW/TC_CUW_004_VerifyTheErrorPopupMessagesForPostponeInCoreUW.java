@@ -31,7 +31,7 @@ public class TC_CUW_004_VerifyTheErrorPopupMessagesForPostponeInCoreUW extends A
 	@DataProvider(name = "TestDataFromTC_CUW_004")
 	public Object[][] getDataFromTestDataFromTC_CUW_004()
 	{
-		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\CoreUW\\Test Data For TC_CUW_004.xlsx", "TC_CUW_004");
+		Object arrObj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\underwriting\\CoreUW\\Test Data For TC_CUW_004.xlsx", "TC_CUW_004");
 		return arrObj;
 	}
 

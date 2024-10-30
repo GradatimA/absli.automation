@@ -33,7 +33,7 @@ public class TC_MPM_052_MasterPolicyWithSFQquestionnaireAnd2BenefitAndRidersWith
 	@DataProvider(name="TestDataFromTC_MPM_052")
 	public Object[][] getTestDataFromTestDataFromTC_MPM_052()
 	{
-		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_052.xlsx", "TC_MPM_052");
+		Object arrobj[][]=TestUtill.getDataFromExcel("C:\\Users\\Gokulnath\\git\\com.absli.auto\\src\\main\\java\\com\\absli\\testdata\\gps\\masterpolicymaker\\Test Data For TC_MPM_052.xlsx", "TC_MPM_052");
 		return arrobj;			
 	}
 	
